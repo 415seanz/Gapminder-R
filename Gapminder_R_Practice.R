@@ -34,15 +34,6 @@ tab <- gapminder %>% filter(country %in% c("United States","Vietnam") & year >= 
 tab %>% ggplot() +
   geom_line(aes(year,life_expectancy,color=country))
 
-#Created scatter plot showing infant mortality vs GDP $/day for African
-#countries by region in 2010
-gapminder_Africa_2010 <- gapminder %>% 
-  filter(year==2010 & continent=="Africa" & !is.na(gdp)) %>%
-  mutate(dollars_per_day=gdp/population/365)
-gapminder_Africa_2010 %>% ggplot() +
-  geom_point(aes(dollars_per_day,infant_mortality,color=region)) + 
-  scale_x_continuous(trans="log2")
-
 #Create stacked density plot showing the density of African countries by the number 
 #of GDP dollars per resident per day in 1970 vs 2010. Shows conditions have improved
 #for their residents over this time period, shown by the 1st bump decreasing and more
