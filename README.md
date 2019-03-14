@@ -1,4 +1,2 @@
 # R
-This is some work I've done in R
-This was pushed from Rstudio
-Another line
+These are some practice visualizations I createded in R using the Gapminder dataset. Code is in the .R file, and the results of running each statement are included as .jpeg's
